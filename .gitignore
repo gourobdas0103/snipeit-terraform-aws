@@ -1,0 +1,28 @@
+# Local .terraform directories and plugins
+**/.terraform/*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files (contain sensitive passwords)
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sensitive SSH Private Keys
+*.pem
+*.key
+id_rsa*
+snipeit-key.pem
+
+# Environment and secrets
+.env
+*.env
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]

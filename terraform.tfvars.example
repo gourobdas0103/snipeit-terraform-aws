@@ -1,0 +1,33 @@
+# ==============================================================================
+# Snipe-IT Deployment Configuration Variables Example
+# Copy to 'terraform.tfvars' and customize as needed
+# ==============================================================================
+
+# AWS Region (Mumbai: ap-south-1, US East: us-east-1, etc.)
+aws_region    = "ap-south-1"
+
+# EC2 Instance Sizing (Free tier eligible)
+instance_type = "t3.micro"
+volume_size   = 20 # GB gp3 storage
+
+# Application Port and Localization
+app_port      = 8000
+timezone      = "Asia/Kolkata"
+
+# Database Configuration
+db_database   = "snipeit"
+db_username   = "snipeit"
+
+# Network Access Restrictions
+# Replace 0.0.0.0/0 with your specific IP (e.g. 203.0.113.4/32) for enhanced security
+allowed_ssh_cidr  = "0.0.0.0/0"
+allowed_http_cidr = "0.0.0.0/0"
+
+# Mail Settings (Optional - set to 'smtp' and provide Gmail credentials if desired)
+mail_mailer       = "log"
+# mail_mailer     = "smtp"
+# mail_host       = "smtp.gmail.com"
+# mail_port       = 587
+# mail_username   = "your-email@gmail.com"
+# mail_password   = "your-16-char-app-password"
+# mail_encryption = "tls"
